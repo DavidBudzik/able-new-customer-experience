@@ -1,0 +1,84 @@
+:root {
+  /* Colors */
+  --bg-app: #fbfaf7;
+  --bg-rail: #f5f4f0;
+  --card: #ffffff;
+  --text: #1c1917;
+  --muted: #78716c;
+  --border: #e7e5e0;
+  --border-hover: #d6d3d1;
+  --accent: #1c1917;
+  --accent-hover: #333333;
+  --blue: #2563eb;
+
+  /* Playbook colors */
+  --pb-blue: #3b82f6;
+  --pb-violet: #8b5cf6;
+  --pb-purple: #7c3aed;
+  --pb-emerald: #10b981;
+  --pb-amber: #f59e0b;
+  --pb-rose: #e11d48;
+  --pb-cyan: #06b6d4;
+  --pb-teal: #14b8a6;
+
+  /* State colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  /* CTA colors */
+  --cta-default: #e03500;
+  --cta-hover: #c52f00;
+  --cta-disabled: #ffd3c2;
+
+  /* Background variants */
+  --bg-subtle: #f0f0f0;
+  --bg-inverted: #181818;
+
+  /* Layout */
+  --rail-width: 72px;
+  --max-width: 1200px;
+
+  /* Typography */
+  --sans: 'Roboto', 'Inter', system-ui, sans-serif;
+  --serif: 'Roboto', system-ui, sans-serif;
+
+  /* Font sizes */
+  --text-xs: 10px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+
+  /* Spacing (4pt grid) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-full: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 18px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 14px 34px -18px rgba(0, 0, 0, 0.18);
+  --shadow-xl: 0 18px 50px -14px rgba(0, 0, 0, 0.08);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 2px rgba(28, 25, 23, 0.08);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+}
+

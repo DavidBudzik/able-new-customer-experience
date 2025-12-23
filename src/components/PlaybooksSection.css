@@ -1,0 +1,529 @@
+.playbooks-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(28, 25, 23, 0.1);
+  margin-bottom: 0;
+}
+
+.section-head h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 20px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.link:hover {
+  color: var(--text);
+}
+
+/* ==================== PLAYBOOK TABS ==================== */
+.playbook-tabs {
+  display: flex;
+  gap: 0;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.playbook-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  padding-bottom: var(--space-md);
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.playbook-tab:hover {
+  color: var(--text);
+}
+
+.playbook-tab.active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.playbook-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px 2px 0 0;
+}
+
+.playbook-tab svg {
+  opacity: 0.6;
+}
+
+.playbook-tab.active svg {
+  opacity: 1;
+}
+
+.tab-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  background: var(--bg-rail);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  margin-left: 2px;
+}
+
+.playbook-tab.active .tab-count {
+  background: var(--bg-inverted);
+  color: var(--card);
+}
+
+/* Playbook List V2 */
+.playbook-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.playbook-card-v2 {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  transition: all 0.2s ease;
+}
+
+.playbook-card-v2:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: #d6d3d1;
+}
+
+.playbook-card-header-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.playbook-title-v2 {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0;
+}
+
+.playbook-badge-v2 {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #059669;
+  background: #ecfdf5;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.playbook-badge-v2.badge-custom {
+  color: #7c3aed;
+  background: #f3e8ff;
+}
+
+.playbook-badge-v2.badge-new {
+  color: #0284c7;
+  background: #e0f2fe;
+}
+
+.playbook-desc-v2 {
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #57534e;
+  margin: 0 0 16px 0;
+}
+
+.playbook-footer-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playbook-meta-v2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.playbook-meta-v2 .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: #78716c;
+}
+
+.playbook-meta-v2 .meta-item i {
+  font-size: 12px;
+  color: #a8a29e;
+}
+
+.playbook-actions-v2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.action-sample {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #0284c7;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.action-sample:hover {
+  color: #0369a1;
+}
+
+.action-play-v2 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #ea580c;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.action-play-v2:hover {
+  color: #c2410c;
+}
+
+.action-play-v2 i {
+  font-size: 12px;
+}
+
+/* ==================== PLAYBOOK PREVIEW MODAL ==================== */
+.playbook-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.playbook-modal {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100vh - 64px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.24);
+  animation: slideUp 0.2s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal Header */
+.playbook-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--space-xl);
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg-app) 0%, var(--card) 100%);
+}
+
+.playbook-modal-title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.playbook-modal-badge {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--success);
+  background: rgba(16, 185, 129, 0.12);
+  padding: 4px 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.playbook-modal-badge.badge-custom {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.12);
+}
+
+.playbook-modal-badge.badge-new {
+  color: #0284c7;
+  background: rgba(2, 132, 199, 0.12);
+}
+
+.playbook-modal-title h2 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.playbook-modal-title p {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.playbook-modal-close {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.playbook-modal-close:hover {
+  background: var(--bg-subtle);
+  color: var(--text);
+}
+
+/* Modal Body */
+.playbook-modal-body {
+  padding: var(--space-xl);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.playbook-modal-section h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 var(--space-md);
+}
+
+.playbook-modal-section h3 svg {
+  color: var(--muted);
+}
+
+/* Playbook Steps */
+.playbook-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.playbook-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-app);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.playbook-step:hover {
+  background: var(--bg-rail);
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Sample Output */
+.playbook-sample-output {
+  background: var(--bg-app);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.sample-output-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.sample-output-header i {
+  font-size: 14px;
+  color: var(--cta-default);
+}
+
+.sample-output-header span {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sample-output-desc {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Modal Meta */
+.playbook-modal-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+.modal-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.modal-meta-item svg,
+.modal-meta-item i {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Modal Footer */
+.playbook-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  border-top: 1px solid var(--border);
+  background: var(--bg-rail);
+}
+
+.modal-btn-secondary {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-btn-secondary:hover {
+  background: var(--bg-subtle);
+  border-color: var(--border-hover);
+}
+
+.modal-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--cta-default);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-btn-primary:hover {
+  background: var(--cta-hover);
+}
+
+.modal-btn-primary svg {
+  flex-shrink: 0;
+}
